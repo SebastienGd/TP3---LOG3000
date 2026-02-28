@@ -31,16 +31,16 @@ def subtract(a,b):
 
 def multiply(a,b):
     """
-    Élève le premier nombre à la puissance du deuxième.
+    Multiplie deux nombres.
     
     Args:
-        a (float/int): Base.
-        b (float/int): Exposant.
+        a (float/int): Premier opérande.
+        b (float/int): Deuxième opérande.
         
     Returns:
-        float/int: Le résultat de `a ** b`.
+        float/int: Le résultat de `a * b`.
     """
-    return a ** b
+    return a * b
 
 def divide(a,b):
     """
