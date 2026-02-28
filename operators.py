@@ -44,13 +44,13 @@ def multiply(a,b):
 
 def divide(a,b):
     """
-    Effectue une division entière du premier nombre par le deuxième.
+    Effectue une division du premier nombre par le deuxième.
     
     Args:
         a (float/int): Numerateur.
         b (float/int): Dénominateur.
         
     Returns:
-        float/int: Le quotient entier de `a // b`.
+        float/int: Le quotient.
     """
-    return a // b
+    return a / b
