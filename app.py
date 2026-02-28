@@ -1,3 +1,8 @@
+"""
+Point d'entrée principal de l'application Flask Calculator.
+Interprète les expressions, relie l'interface au traitement arithmétique et gère le serveur web.
+"""
+
 from flask import Flask, request, render_template
 from operators import add, subtract, multiply, divide
 
@@ -11,6 +16,20 @@ OPS = {
 }
 
 def calculate(expr: str):
+    """
+    Analyse l'expression arithmétique de l'utilisateur et l'évalue afin de renvoyer le résultat.
+    Gère au plus une opération binaire à la fois avec une séparation stricte des opérandes gauche/droite.
+    
+    Args:
+        expr (str): L'expression arithmétique entière capturée par le front-end.
+        
+    Returns:
+        float/int: Le numérique final modélisant la réponse au calcul.
+        
+    Raises:
+        ValueError: Si le format d'expression est vide, invalide (sans opérateur, opérateurs multiples) 
+                    ou en présence d'opérandes illisibles (non-nombres).
+    """
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -43,6 +62,13 @@ def calculate(expr: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """
+    Détermine la réponse à adresser à l'utilisateur ciblant la racine du site web.
+    En POST (calcul soumis par le clique sur le bouton "egal"), évalue l'expression affichée.
+    
+    Returns:
+        str: Modèle index.html restitué par Jinja, injectant la variable 'result'.
+    """
     result = ""
     if request.method == 'POST':
         expression = request.form.get('display', '')
