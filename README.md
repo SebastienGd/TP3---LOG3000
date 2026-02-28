@@ -88,7 +88,7 @@ Voir `TP3---LOG3000/tests/README.md` pour les détails de couverture de test.
 ## Flux de contribution
 
 - Créer ou confirmer un problème (issue) GitHub décrivant le bogue/la fonctionnalité.
-- Créer une branche dédiée à partir de `main` : `<type>-<id>/-short-description`
+- Créer une branche dédiée à partir de `main` : `<type>-<id>/short-description`
 - Implémenter les modifications et ajouter/mettre à jour les tests.
 - Exécuter les tests localement avant de commiter.
 - Commiter avec un message clair expliquant pourquoi le changement est nécessaire.
