@@ -18,16 +18,16 @@ def add(a,b):
 
 def subtract(a,b):
     """
-    Soustrait le premier nombre du deuxième.
+    Soustrait le deuxième nombre du premier.
     
     Args:
-        a (float/int): Nombre à soustraire.
-        b (float/int): Nombre de base.
+        a (float/int): Nombre de base.
+        b (float/int): Nombre à soustraire.
         
     Returns:
-        float/int: La différence `b - a`.
+        float/int: La différence `a - b`.
     """
-    return b - a
+    return a - b
 
 def multiply(a,b):
     """
